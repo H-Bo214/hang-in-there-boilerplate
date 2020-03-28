@@ -195,7 +195,7 @@ function saveCurrentPoster() {
   if (!(savedPosters.includes(currentPoster))) {
     savedPosters.push(currentPoster);
     savedPostersGrid.insertAdjacentHTML('beforeend',  
-    `<section class='mini-poster'>
+    `<section class='mini-poster' id= ${currentPoster.id}>
     <img src=${currentPoster.imageURL} />
     <h2>${currentPoster.title}</h2>
     <h4>${currentPoster.quote}</h4>
@@ -208,14 +208,23 @@ function savedPosterButtonHandler(event) {
   if (event.target === backToMain) {
     navBackToMain();
   } else if(event.target === miniPoster) {
-    console.log(event);
+   console.log(miniPoster);
+   
     
   };
 };
 
-function deleteSavedPoster() {
-  console.log('hello');
+function deleteSavedPoster(event) {
   
+  var target = event.target
+  console.log(target);
+  if (savedPosters.includes(target)) {
+  savedPostersGrid.remove(target)
+ 
+  }
+    //  document.getElementById(savedPosters)
+    //  var currentPosterId =
+   
 }
 
 function navBackToMain() {
