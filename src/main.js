@@ -125,6 +125,7 @@ var currentPoster;
 mainPosterPage.addEventListener('click', buttonHandler);
 savedPosterPage.addEventListener('click', savedPosterButtonHandler);
 posterForm.addEventListener('click', posterFormButtonHandler);
+savedPosterPage.addEventListener('dblclick', deleteSavedPoster )
 
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
@@ -177,8 +178,8 @@ function displayPosterForm() {
 }
 
 function displaySavedPosterPage() {
-  savedPosterPage.classList.remove('hidden');
   mainPosterPage.classList.add('hidden');
+  savedPosterPage.classList.remove('hidden');
 }
 
 function displayRandomPoster() {
@@ -206,8 +207,16 @@ function saveCurrentPoster() {
 function savedPosterButtonHandler(event) {
   if (event.target === backToMain) {
     navBackToMain();
+  } else if(event.target === miniPoster) {
+    console.log(event);
+    
   };
 };
+
+function deleteSavedPoster() {
+  console.log('hello');
+  
+}
 
 function navBackToMain() {
   event.preventDefault();
