@@ -253,8 +253,6 @@ function customPosterData() {
   currentPoster = customPoster
 }
 
-// Generate a random picture quote or image depending of the element click within the main page
-
 function dynamicPosterMaker() {
   if (event.target === posterImg) {
     randomPosterImage();
