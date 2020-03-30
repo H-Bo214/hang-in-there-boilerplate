@@ -125,6 +125,7 @@ var currentPoster;
 mainPosterPage.addEventListener('click', buttonHandler);
 savedPosterPage.addEventListener('click', savedPosterButtonHandler);
 posterForm.addEventListener('click', posterFormButtonHandler);
+mainPosterPage.addEventListener('click', dynamicPosterMaker)
 
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
@@ -250,4 +251,16 @@ function customPosterData() {
   titles.push(customPoster.title);
   quotes.push(customPoster.quote);
   currentPoster = customPoster
+}
+
+// Generate a random picture quote or image depending of the element click within the main page
+
+function dynamicPosterMaker() {
+  if (event.target === posterImg) {
+    randomPosterImage();
+  } else if (event.target === posterTitle) {
+    randomTitle();
+  } else if (event.target === posterQuote) {
+    randomQuote();
+  }
 }
