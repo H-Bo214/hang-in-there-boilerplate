@@ -17,6 +17,7 @@ var savedPosterPage = document.querySelector('.saved-posters');
 var backToMain = document.querySelector('.back-to-main');
 var savedPostersGrid = document.querySelector('.saved-posters-grid')
 var miniPoster = document.querySelector('.mini-poster')
+var divider = document.querySelector('.divider');
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -135,8 +136,8 @@ function getRandomIndex(array) {
 };
 
 currentPoster = new Poster(
-  randomPosterImage(), 
-  randomTitle(), 
+  randomPosterImage(),
+  randomTitle(),
   randomQuote()
 )
 
@@ -185,8 +186,8 @@ function displaySavedPosterPage() {
 
 function displayRandomPoster() {
   var newCurrentPoster = new Poster(
-    randomPosterImage(), 
-    randomTitle(), 
+    randomPosterImage(),
+    randomTitle(),
     randomQuote()
   );
   currentPoster = newCurrentPoster;
@@ -195,7 +196,7 @@ function displayRandomPoster() {
 function saveCurrentPoster() {
   if (!(savedPosters.includes(currentPoster))) {
     savedPosters.push(currentPoster);
-    savedPostersGrid.insertAdjacentHTML('beforeend',  
+    savedPostersGrid.insertAdjacentHTML('beforeend',
       `<section class='mini-poster' id=${currentPoster.id}>
       <img src=${currentPoster.imageURL} />
       <h2>${currentPoster.title}</h2>
@@ -231,7 +232,7 @@ function posterFormButtonHandler(event) {
   if (event.target === showMain) {
     navShowMain();
   } else if (event.target === makePoster) {
-    navShowMain();
+    validateCustomPosterData()
     customPosterData();
   }
 }
@@ -260,5 +261,13 @@ function dynamicPosterMaker() {
     randomTitle();
   } else if (event.target === posterQuote) {
     randomQuote();
+  }
+}
+
+function validateCustomPosterData() {
+  if (customPosterImageUrl.value === "" || customPosterTitle.value === "" || customPosterQuote.value === "") {
+    divider.innerHTML = `<p>* All fields are required * </p>`
+  } else {
+    navShowMain();
   }
 }
