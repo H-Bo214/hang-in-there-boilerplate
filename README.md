@@ -113,3 +113,14 @@ Our assignment was to create a website capable of displaying and creating motiva
 
 ## In Action
 
+* How our buttons work to randomize, save, display saved posters.   
+
+![Demo of saved poster and their removal](https://media.giphy.com/media/QW9yMFtVW1Zdf2CuCk/giphy.gif)
+
+* We can also delete saved posters with a double click, as such:
+
+![Deleting saved posters](https://media.giphy.com/media/hvBCToRxh59qmfulsy/giphy.gif)
+
+* It is also possible to create your own poster using three input element. If inputs are empty, an error message is returned.
+
+![Creating a custom poster and input validation](https://media.giphy.com/media/lSD9rel50etj6EYhHu/giphy.gif)
