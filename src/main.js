@@ -123,10 +123,13 @@ var savedPosters = [
 var currentPoster;
 
 // event listeners go here 👇
-mainPosterPage.addEventListener('click', buttonHandler);
+mainPosterPage.addEventListener('click', function() {
+  buttonHandler(event)
+  dynamicPosterMaker(event)
+});
 savedPosterPage.addEventListener('click', savedPosterButtonHandler);
 posterForm.addEventListener('click', posterFormButtonHandler);
-mainPosterPage.addEventListener('click', dynamicPosterMaker)
+// mainPosterPage.addEventListener('click', )
 
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
@@ -245,7 +248,7 @@ function navShowMain() {
 function customPosterData() {
   event.preventDefault();
   var customPoster = new Poster()
-  customPoster.imageURL = posterImg.src = customPosterImageUrl.value;
+  customPoster.imageURL = customPosterImageUrl.value;
   customPoster.title = posterTitle.innerText = customPosterTitle.value;
   customPoster.quote = posterQuote.innerText = customPosterQuote.value;
   images.push(customPoster.imageURL);
@@ -254,7 +257,7 @@ function customPosterData() {
   currentPoster = customPoster
 }
 
-function dynamicPosterMaker() {
+function dynamicPosterMaker(event) {
   if (event.target === posterImg) {
     randomPosterImage();
   } else if (event.target === posterTitle) {
