@@ -77,3 +77,39 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 
 
 Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
+
+## Contributors
+
+Edwin Montealvo, Horacio Borrego
+
+## About
+
+Our assignment was to create a website capable of displaying and creating motivational posters. The user would have the ability to customize the poster image, title and quote.
+
+## Project Goals
+
+* Write a JavaScript script using existing HTML and CSS and some predefined JavaScript variables.
+* Get acquainted with event delegation using event listeners and event handlers.
+* Strive to keep code DRY and follow the SRP.
+* Demonstrate good GitHub collaboration and workflow with partner.
+
+### Challenges
+
+* Targeting DOM Nodes that are introduced after page load.
+* Utilizing proper control flow to achieve the desired outcome.
+* Remembering to create pull requests on the appropriate repository.
+
+### Wins
+
+* Strong collaborative effort.
+* Completed iteration 4 along with some additional extensions.
+* Code looks reasonably DRY and mostly follows SRP.
+
+## Technologies Used
+
+* JavaScript
+* CSS
+* HTML
+
+## In Action
+
