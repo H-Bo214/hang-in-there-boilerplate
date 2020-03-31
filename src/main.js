@@ -225,6 +225,7 @@ function navBackToMain() {
 function posterFormButtonHandler(event) {
   if (event.target === showMain) {
     navShowMain();
+    displayRandomPoster();
   } else if (event.target === makePoster) {
     validateCustomPosterData()
     customPosterData();
