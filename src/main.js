@@ -17,6 +17,7 @@ var savedPosterPage = document.querySelector('.saved-posters');
 var backToMain = document.querySelector('.back-to-main');
 var savedPostersGrid = document.querySelector('.saved-posters-grid')
 var miniPoster = document.querySelector('.mini-poster')
+var divider = document.querySelector('.divider');
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -265,7 +266,7 @@ function dynamicPosterMaker() {
 
 function validateCustomPosterData() {
   if (customPosterImageUrl.value === "" || customPosterTitle.value === "" || customPosterQuote.value === "") {
-    alert('Please fill out all 3 categories')
+    divider.innerHTML = `<p>* All fields are required * </p>`
   } else {
     navShowMain();
   }
