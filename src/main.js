@@ -237,7 +237,7 @@ function navShowMain() {
   mainPosterPage.classList.remove('hidden');
 }
 
-function validateCustomPosterData() {
+function validateCustomPosterData() { 
   if (customPosterImageUrl.value === "" || customPosterTitle.value === "" || customPosterQuote.value === "") {
     divider.innerHTML = `<p>* All fields are required * </p>`
   } else {
