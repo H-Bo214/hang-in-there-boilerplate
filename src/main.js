@@ -217,7 +217,7 @@ function savedPosterButtonHandler(event) {
 };
 
 function navBackToMain() {
-  event.preventDefault();
+  // event.preventDefault();
   savedPosterPage.classList.add('hidden');
   mainPosterPage.classList.remove('hidden');
 }
@@ -225,7 +225,7 @@ function navBackToMain() {
 function posterFormButtonHandler(event) {
   if (event.target === showMain) {
     navShowMain();
-    displayRandomPoster();
+    // displayRandomPoster();
   } else if (event.target === makePoster) {
     validateCustomPosterData()
     customPosterData();
